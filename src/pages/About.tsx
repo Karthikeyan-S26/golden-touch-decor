@@ -1,5 +1,5 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { Award, Users, Target, Heart, CheckCircle, Star } from "lucide-react";
+import { Award, Users, Target, Heart, CheckCircle, Star, TrendingUp, Shield } from "lucide-react";
 import aboutImage from "@/assets/about-team.jpg";
 
 const About = () => {
@@ -136,6 +136,43 @@ const About = () => {
                 </div>
               ))}
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Founder Section */}
+      <section className="section-padding bg-cream">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <Card className="border-border overflow-hidden">
+              <CardContent className="p-0">
+                <div className="grid md:grid-cols-5 gap-8 items-center">
+                  <div className="md:col-span-2 p-8 bg-charcoal text-white">
+                    <div className="text-center">
+                      <div className="w-32 h-32 mx-auto mb-4 bg-gold rounded-full flex items-center justify-center">
+                        <span className="text-5xl font-bold text-charcoal">SS</span>
+                      </div>
+                      <h3 className="text-2xl font-bold font-playfair mb-1">Mr. S. Sathiyaraj</h3>
+                      <p className="text-gold mb-4">Founder & Lead Designer</p>
+                      <p className="text-sm text-gray-300">Need any help?</p>
+                      <a href="tel:+919790184627" className="text-xl font-semibold text-gold hover:text-gold-light transition-colors">
+                        +91 97901 84627
+                      </a>
+                    </div>
+                  </div>
+                  <div className="md:col-span-3 p-8">
+                    <p className="text-lg text-muted-foreground leading-relaxed mb-4">
+                      With over 15 years of experience in interior and exterior design, I founded LuxeSpaces with a 
+                      singular vision: to make exceptional design accessible to everyone.
+                    </p>
+                    <p className="text-lg text-muted-foreground leading-relaxed">
+                      Every project we undertake is a testament to our commitment to excellence, creativity, and 
+                      client satisfaction. I personally oversee each design to ensure it meets our exacting standards.
+                    </p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
