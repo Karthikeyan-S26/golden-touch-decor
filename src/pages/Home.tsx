@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { ArrowRight, Paintbrush, Home as HomeIcon, Building2, Sofa, Hammer, Sparkles, Award, Users, MessageCircle, CheckCircle2, Phone } from "lucide-react";
+import { ArrowRight, Paintbrush, Home as HomeIcon, Building2, Sofa, Hammer, Sparkles, Award, Users, MessageCircle, CheckCircle2, Phone, Zap, Clock, ShieldCheck, Palette, Layout, Lightbulb } from "lucide-react";
 import heroImage from "@/assets/hero-interior.jpg";
 import project1 from "@/assets/project-1.jpg";
 import project2 from "@/assets/project-2.jpg";
@@ -9,40 +9,92 @@ import project3 from "@/assets/project-3.jpg";
 
 const Home = () => {
   const services = [
-    { icon: HomeIcon, title: "Interior Design", description: "Transform your indoor spaces" },
-    { icon: Building2, title: "Exterior Design", description: "Beautiful outdoor aesthetics" },
-    { icon: Sparkles, title: "Renovation", description: "Refresh and modernize" },
-    { icon: Paintbrush, title: "Painting", description: "Professional color solutions" },
-    { icon: Sofa, title: "Furniture", description: "Custom and curated pieces" },
-    { icon: Hammer, title: "False Ceiling", description: "Elegant ceiling designs" },
+    { 
+      icon: HomeIcon, 
+      title: "Residential Interior", 
+      description: "Personalized living spaces that reflect your unique style and comfort",
+      features: ["Space Planning", "Color Schemes", "Furniture Selection"]
+    },
+    { 
+      icon: Building2, 
+      title: "Commercial Design", 
+      description: "Professional environments that enhance productivity and brand identity",
+      features: ["Office Layouts", "Retail Spaces", "Hospitality"]
+    },
+    { 
+      icon: Palette, 
+      title: "Renovation & Remodeling", 
+      description: "Transform existing spaces with modern upgrades and fresh perspectives",
+      features: ["Kitchen Remodels", "Bathroom Updates", "Full Home Renovations"]
+    },
+    { 
+      icon: Paintbrush, 
+      title: "Premium Painting", 
+      description: "Expert color consultation and flawless application techniques",
+      features: ["Texture Finishes", "Accent Walls", "Exterior Painting"]
+    },
+    { 
+      icon: Layout, 
+      title: "Custom Furniture", 
+      description: "Bespoke furniture pieces designed to fit your space perfectly",
+      features: ["Built-in Storage", "Designer Pieces", "Space Optimization"]
+    },
+    { 
+      icon: Hammer, 
+      title: "Ceiling Design", 
+      description: "Sophisticated false ceiling solutions with integrated lighting",
+      features: ["Gypsum Ceilings", "POP Designs", "LED Integration"]
+    },
   ];
 
   const featuredProjects = [
-    { image: project1, title: "Luxury Living Room", category: "Interior" },
-    { image: project2, title: "Modern Office Space", category: "Commercial" },
-    { image: project3, title: "Elegant Bedroom", category: "Interior" },
+    { 
+      image: project1, 
+      title: "Modern Luxury Villa", 
+      category: "Residential Interior",
+      location: "Mumbai",
+      area: "3500 sq ft"
+    },
+    { 
+      image: project2, 
+      title: "Corporate Office", 
+      category: "Commercial Design",
+      location: "Bangalore",
+      area: "5000 sq ft"
+    },
+    { 
+      image: project3, 
+      title: "Boutique Hotel Suite", 
+      category: "Hospitality Design",
+      location: "Goa",
+      area: "1200 sq ft"
+    },
   ];
 
   const processSteps = [
     {
       number: "01",
-      title: "Initial Consultation",
-      description: "We begin with a one-on-one meeting to understand your vision, preferences, and requirements."
+      title: "Consultation & Brief",
+      description: "In-depth discussion to understand your vision, lifestyle, and specific requirements",
+      icon: MessageCircle
     },
     {
       number: "02",
-      title: "Design Planning",
-      description: "Selecting materials, layouts, and furnishings, creating detailed 3D renderings for approval."
+      title: "Design Development",
+      description: "Creating detailed 3D renderings, material boards, and comprehensive design proposals",
+      icon: Lightbulb
     },
     {
       number: "03",
-      title: "Project Execution",
-      description: "With approved designs, we manage and coordinate all aspects of construction and installation."
+      title: "Execution & Build",
+      description: "Expert project management with quality craftsmanship and timely delivery",
+      icon: Hammer
     },
     {
       number: "04",
-      title: "Final Review",
-      description: "Thorough walkthrough to ensure every detail meets your expectations before handover."
+      title: "Handover & Support",
+      description: "Final walkthrough, adjustments, and ongoing after-service support",
+      icon: ShieldCheck
     }
   ];
 
@@ -50,35 +102,56 @@ const Home = () => {
     {
       name: "Priya Sharma",
       location: "Mumbai",
-      text: "LuxeSpaces transformed our apartment into a stylish, functional home. Their attention to detail and creative ideas exceeded our expectations. Highly recommended!",
+      project: "Luxury Apartment",
+      text: "The team transformed our 3BHK into a stunning modern masterpiece. Every detail was meticulously planned and executed. Their 3D renderings helped us visualize the final outcome perfectly.",
       rating: 5
     },
     {
-      name: "Arjun Patel",
+      name: "Arjun Mehta",
       location: "Bangalore",
-      text: "The team handled our office renovation with professionalism and care. The new design has truly elevated our workspace atmosphere.",
+      project: "Tech Office",
+      text: "Outstanding commercial design services! They created a collaborative workspace that boosted our team's productivity by 40%. Professional, on-time, and within budget.",
       rating: 5
     },
     {
-      name: "Meena Reddy",
+      name: "Meena & Rajesh",
       location: "Chennai",
-      text: "From the first consultation to the final reveal, LuxeSpaces made our dream home a reality. Their personalized approach is unmatched.",
+      project: "Villa Renovation",
+      text: "From initial consultation to final handover, the experience was seamless. They listened to our needs and delivered beyond expectations. Highly recommend for luxury renovations!",
       rating: 5
     }
   ];
 
   const whyChooseUs = [
     {
-      title: "Tailored Design Solutions",
-      description: "We craft custom interiors that capture your personality and suit your lifestyle perfectly."
+      icon: Zap,
+      title: "15+ Years Expertise",
+      description: "Proven track record with 500+ successful projects across residential and commercial sectors"
     },
     {
-      title: "Seamless Project Management",
-      description: "Our team oversees every phase, ensuring each detail is handled with precision and care."
+      icon: Award,
+      title: "Award-Winning Designs",
+      description: "Recognized for innovative solutions and exceptional craftsmanship in interior design"
     },
     {
-      title: "Collaborative Partnership",
-      description: "Your feedback shapes every step, guaranteeing a finished space that truly feels like yours."
+      icon: Clock,
+      title: "On-Time Delivery",
+      description: "99% project completion rate within agreed timelines using advanced project management"
+    },
+    {
+      icon: ShieldCheck,
+      title: "Quality Guarantee",
+      description: "Premium materials, certified professionals, and comprehensive warranty on all work"
+    },
+    {
+      icon: Users,
+      title: "Client-First Approach",
+      description: "Personalized service with dedicated project managers for seamless communication"
+    },
+    {
+      icon: Palette,
+      title: "Turnkey Solutions",
+      description: "End-to-end services from concept to completion, including permits and approvals"
     }
   ];
 
@@ -89,130 +162,132 @@ const Home = () => {
         href="https://wa.me/1234567890"
         target="_blank"
         rel="noopener noreferrer"
-        className="fixed bottom-6 right-6 z-50 bg-green-500 hover:bg-green-600 text-white rounded-full p-4 shadow-lg hover-lift transition-all"
+        className="fixed bottom-8 right-8 z-50 bg-green-500 hover:bg-green-600 text-white rounded-full p-4 shadow-2xl hover-lift transition-all animate-float gold-glow"
         aria-label="Chat on WhatsApp"
       >
-        <MessageCircle size={28} />
+        <MessageCircle size={32} />
       </a>
 
-      {/* Hero Section */}
-      <section className="relative h-screen flex items-center justify-center overflow-hidden">
+      {/* Hero Section - Enhanced */}
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+        {/* Animated Background */}
         <div 
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: `url(${heroImage})` }}
         >
-          <div className="absolute inset-0 bg-black/50" />
+          <div className="absolute inset-0 bg-gradient-to-br from-black/70 via-black/50 to-black/70" />
+          <div className="absolute inset-0 pattern-grid opacity-20" />
         </div>
         
-        <div className="relative z-10 text-center text-white px-4 max-w-4xl mx-auto">
-          <p className="text-gold font-semibold mb-4 animate-fade-in">→ LuxeSpaces Design Studio</p>
-          <h1 className="text-5xl md:text-7xl font-bold font-playfair mb-6 animate-fade-in">
-            Crafting Limitless Possibilities for Your <span className="text-gold">Dream Spaces</span>
+        {/* Decorative Elements */}
+        <div className="absolute top-20 left-10 w-20 h-20 border-2 border-gold/30 rounded-full animate-float" />
+        <div className="absolute bottom-32 right-20 w-32 h-32 border-2 border-gold/20 rounded-lg rotate-45 animate-float" style={{ animationDelay: '1s' }} />
+        
+        <div className="relative z-10 text-center text-white px-4 max-w-5xl mx-auto">
+          <div className="mb-6 animate-slide-up">
+            <span className="inline-block px-6 py-2 bg-gold/20 backdrop-blur-sm border border-gold/30 rounded-full text-gold font-semibold text-sm tracking-wider">
+              ★ PREMIUM INTERIOR & EXTERIOR DESIGN STUDIO
+            </span>
+          </div>
+          <h1 className="text-6xl md:text-8xl font-bold font-playfair mb-8 animate-slide-up leading-tight">
+            Crafting <span className="text-gradient">Limitless</span> Possibilities for Your Dream Spaces
           </h1>
-          <p className="text-xl md:text-2xl mb-8 text-gray-200 animate-fade-in">
-            Bringing your vision to life with tailored solutions that reflect your style and needs
+          <p className="text-xl md:text-2xl mb-12 text-gray-200 max-w-3xl mx-auto animate-slide-up leading-relaxed">
+            Award-winning design solutions combining innovation, elegance, and functionality. Transform your vision into extraordinary reality.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in">
+          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center animate-slide-up">
             <Link to="/contact">
-              <Button size="lg" className="bg-gold hover:bg-gold-dark text-charcoal font-semibold text-lg px-8 py-6">
-                Get Free Consultation <ArrowRight className="ml-2" size={20} />
+              <Button size="lg" className="bg-gold hover:bg-gold-dark text-charcoal font-bold text-lg px-10 py-7 shine-effect rounded-lg group">
+                Start Your Project
+                <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={22} />
               </Button>
             </Link>
-            <a href="tel:+1234567890">
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-charcoal text-lg px-8 py-6">
-                <Phone className="mr-2" size={20} /> Call Us Now
+            <Link to="/projects">
+              <Button size="lg" variant="outline" className="glass-effect text-white border-white/30 hover:bg-white/10 text-lg px-10 py-7 rounded-lg backdrop-blur-md">
+                View Portfolio
               </Button>
-            </a>
+            </Link>
           </div>
-        </div>
-      </section>
 
-      {/* Stats Section */}
-      <section className="py-16 bg-charcoal text-white">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-            <div>
-              <h3 className="text-5xl font-bold font-playfair text-gold mb-2">15+</h3>
-              <p className="text-gray-300">Years of Experience</p>
-            </div>
-            <div>
-              <h3 className="text-5xl font-bold font-playfair text-gold mb-2">500+</h3>
-              <p className="text-gray-300">Projects Completed</p>
-            </div>
-            <div>
-              <h3 className="text-5xl font-bold font-playfair text-gold mb-2">95%</h3>
-              <p className="text-gray-300">Positive Feedback</p>
-            </div>
-            <div>
-              <h3 className="text-5xl font-bold font-playfair text-gold mb-2">100%</h3>
-              <p className="text-gray-300">Satisfaction Rate</p>
+          {/* Scroll Indicator */}
+          <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <div className="w-6 h-10 border-2 border-gold/50 rounded-full flex justify-center pt-2">
+              <div className="w-1 h-2 bg-gold rounded-full" />
             </div>
           </div>
         </div>
       </section>
 
-      {/* About Preview Section */}
-      <section className="section-padding bg-background">
-        <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <p className="text-gold font-semibold mb-2">ABOUT US</p>
-              <h2 className="text-4xl md:text-5xl font-bold font-playfair mb-6">
-                Our passion for design, <span className="text-gold">your vision realized</span>
-              </h2>
-              <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-                Our skilled design team partners closely with you to capture your vision and bring it to life with meticulous attention to every detail. Whether it's refreshing a single room or redesigning an entire home.
-              </p>
-              <div className="space-y-3 mb-8">
-                <div className="flex items-center space-x-3">
-                  <CheckCircle2 className="text-gold flex-shrink-0" size={24} />
-                  <span className="text-foreground">Creative Expertise</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <CheckCircle2 className="text-gold flex-shrink-0" size={24} />
-                  <span className="text-foreground">Client-Focused Approach</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <CheckCircle2 className="text-gold flex-shrink-0" size={24} />
-                  <span className="text-foreground">Quality Craftsmanship</span>
+      {/* Stats Section - Enhanced */}
+      <section className="py-20 gradient-dark text-white relative overflow-hidden">
+        <div className="absolute inset-0 pattern-dots opacity-10" />
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            <div className="text-center group">
+              <div className="mb-4 inline-block">
+                <div className="w-20 h-20 mx-auto bg-gold/20 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+                  <Award className="text-gold" size={36} />
                 </div>
               </div>
-              <Link to="/about">
-                <Button variant="outline" className="border-gold text-gold hover:bg-gold hover:text-charcoal">
-                  Read More About Us
-                </Button>
-              </Link>
+              <h3 className="text-6xl font-bold font-playfair text-gold mb-2">15+</h3>
+              <p className="text-gray-300 font-medium">Years of Excellence</p>
             </div>
-            <div className="grid grid-cols-2 gap-4">
-              <img src={project1} alt="Design 1" className="rounded-lg hover-lift" />
-              <img src={project2} alt="Design 2" className="rounded-lg hover-lift mt-8" />
+            <div className="text-center group">
+              <div className="mb-4 inline-block">
+                <div className="w-20 h-20 mx-auto bg-gold/20 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+                  <Building2 className="text-gold" size={36} />
+                </div>
+              </div>
+              <h3 className="text-6xl font-bold font-playfair text-gold mb-2">500+</h3>
+              <p className="text-gray-300 font-medium">Projects Delivered</p>
+            </div>
+            <div className="text-center group">
+              <div className="mb-4 inline-block">
+                <div className="w-20 h-20 mx-auto bg-gold/20 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+                  <Users className="text-gold" size={36} />
+                </div>
+              </div>
+              <h3 className="text-6xl font-bold font-playfair text-gold mb-2">95%</h3>
+              <p className="text-gray-300 font-medium">Client Satisfaction</p>
+            </div>
+            <div className="text-center group">
+              <div className="mb-4 inline-block">
+                <div className="w-20 h-20 mx-auto bg-gold/20 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+                  <Zap className="text-gold" size={36} />
+                </div>
+              </div>
+              <h3 className="text-6xl font-bold font-playfair text-gold mb-2">99%</h3>
+              <p className="text-gray-300 font-medium">On-Time Completion</p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Why Choose Us */}
-      <section className="section-padding bg-cream">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <p className="text-gold font-semibold mb-2">WHY CHOOSE US</p>
-            <h2 className="text-4xl md:text-5xl font-bold font-playfair mb-4">
-              An Inside Look at Our <span className="text-gold">Creative Process</span>
+      {/* Why Choose Us - Premium Design */}
+      <section className="section-padding bg-background relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-1/3 h-full bg-cream/30 rounded-l-[100px]" />
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="text-center mb-16">
+            <span className="text-gold font-bold text-sm tracking-wider uppercase">WHY CHOOSE LUXESPACES</span>
+            <h2 className="text-5xl md:text-6xl font-bold font-playfair mt-4 mb-6">
+              Excellence in Every <span className="text-gradient">Detail</span>
             </h2>
-            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              Journey with us from initial inspiration to final reveal as we turn your ideas into reality through imaginative design, teamwork, and skilled execution.
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+              Combining technical expertise with creative vision to deliver exceptional spaces that inspire
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {whyChooseUs.map((item, index) => (
-              <Card key={index} className="hover-lift border-border text-center">
+              <Card key={index} className="hover-lift border-2 border-transparent hover:border-gold/30 transition-all shine-effect group">
                 <CardContent className="p-8">
-                  <div className="w-16 h-16 mx-auto mb-4 bg-white rounded-full flex items-center justify-center">
-                    <div className="text-gold text-2xl font-bold">{String(index + 1).padStart(2, '0')}</div>
+                  <div className="mb-6">
+                    <div className="w-16 h-16 bg-gradient-gold rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform shadow-lg">
+                      <item.icon className="text-charcoal" size={32} />
+                    </div>
                   </div>
-                  <h3 className="text-xl font-semibold font-playfair mb-3">{item.title}</h3>
-                  <p className="text-muted-foreground">{item.description}</p>
+                  <h3 className="text-2xl font-bold font-playfair mb-3 group-hover:text-gold transition-colors">{item.title}</h3>
+                  <p className="text-muted-foreground leading-relaxed">{item.description}</p>
                 </CardContent>
               </Card>
             ))}
@@ -220,141 +295,180 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Services Preview */}
-      <section className="section-padding bg-background">
+      {/* Services - Advanced Grid */}
+      <section className="section-padding bg-cream relative">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <p className="text-gold font-semibold mb-2">OUR SERVICES</p>
-            <h2 className="text-4xl md:text-5xl font-bold font-playfair mb-4">
-              Innovative design services <span className="text-gold">for every need</span>
+          <div className="text-center mb-16">
+            <span className="text-gold font-bold text-sm tracking-wider uppercase">COMPREHENSIVE SERVICES</span>
+            <h2 className="text-5xl md:text-6xl font-bold font-playfair mt-4 mb-6">
+              Premium Design <span className="text-gradient">Solutions</span>
             </h2>
-            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              Personalized interior and exterior solutions from concept to completion
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              Full-spectrum design services tailored to residential and commercial excellence
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
-              <Card key={index} className="hover-lift border-border group">
-                <CardContent className="p-6">
-                  <div className="w-16 h-16 mb-4 bg-cream rounded-full flex items-center justify-center group-hover:bg-gold transition-colors">
-                    <service.icon className="text-gold group-hover:text-charcoal transition-colors" size={32} />
+              <Card key={index} className="group hover-lift border-0 shadow-xl overflow-hidden">
+                <CardContent className="p-0">
+                  <div className="relative bg-charcoal p-8 overflow-hidden">
+                    <div className="absolute top-0 right-0 w-32 h-32 bg-gold/10 rounded-full -mr-16 -mt-16" />
+                    <div className="relative z-10">
+                      <service.icon className="text-gold mb-4 group-hover:scale-110 transition-transform" size={40} />
+                      <h3 className="text-2xl font-bold font-playfair text-white mb-2">{service.title}</h3>
+                    </div>
                   </div>
-                  <h3 className="text-xl font-semibold font-playfair mb-2">{service.title}</h3>
-                  <p className="text-muted-foreground">{service.description}</p>
+                  <div className="p-8 bg-white">
+                    <p className="text-muted-foreground mb-6 leading-relaxed">{service.description}</p>
+                    <div className="space-y-2">
+                      {service.features.map((feature, idx) => (
+                        <div key={idx} className="flex items-center space-x-3">
+                          <CheckCircle2 className="text-gold flex-shrink-0" size={18} />
+                          <span className="text-sm text-foreground">{feature}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
                 </CardContent>
               </Card>
             ))}
           </div>
 
-          <div className="text-center mt-12">
+          <div className="text-center mt-16">
             <Link to="/services">
-              <Button size="lg" className="bg-gold hover:bg-gold-dark text-charcoal font-semibold">
-                See All Services <ArrowRight className="ml-2" size={18} />
+              <Button size="lg" className="bg-charcoal hover:bg-charcoal/90 text-white font-bold text-lg px-10 py-7 rounded-lg shine-effect">
+                Explore All Services
+                <ArrowRight className="ml-2" size={20} />
               </Button>
             </Link>
           </div>
         </div>
       </section>
 
-      {/* How We Work */}
-      <section className="section-padding bg-cream">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <p className="text-gold font-semibold mb-2">HOW WE WORK</p>
-            <h2 className="text-4xl md:text-5xl font-bold font-playfair mb-4">
-              From concept to <span className="text-gold">completion</span>
+      {/* Process Timeline - Professional */}
+      <section className="section-padding gradient-dark text-white relative overflow-hidden">
+        <div className="absolute inset-0 pattern-grid opacity-5" />
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="text-center mb-16">
+            <span className="text-gold font-bold text-sm tracking-wider uppercase">OUR PROCESS</span>
+            <h2 className="text-5xl md:text-6xl font-bold font-playfair mt-4 mb-6">
+              From Vision to <span className="text-gold">Reality</span>
             </h2>
-            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              Our design process guides you seamlessly from initial ideas to final execution
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              A streamlined, transparent process ensuring excellence at every stage
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 relative">
+            {/* Connection Line */}
+            <div className="hidden lg:block absolute top-20 left-[12.5%] right-[12.5%] h-1 bg-gradient-to-r from-gold via-gold/50 to-gold" style={{ width: '75%' }} />
+            
             {processSteps.map((step, index) => (
               <div key={index} className="relative">
-                <div className="text-center">
-                  <div className="w-20 h-20 mx-auto mb-4 bg-gold rounded-full flex items-center justify-center">
-                    <span className="text-3xl font-bold font-playfair text-charcoal">{step.number}</span>
+                <div className="text-center group">
+                  <div className="relative inline-block mb-6">
+                    <div className="w-24 h-24 mx-auto bg-gold rounded-2xl flex items-center justify-center transform group-hover:scale-110 group-hover:rotate-6 transition-all shadow-2xl gold-glow">
+                      <step.icon className="text-charcoal" size={36} />
+                    </div>
+                    <div className="absolute -top-3 -right-3 w-12 h-12 bg-charcoal border-4 border-gold rounded-full flex items-center justify-center font-bold text-gold text-lg">
+                      {step.number}
+                    </div>
                   </div>
-                  <h3 className="text-xl font-semibold font-playfair mb-3">{step.title}</h3>
-                  <p className="text-muted-foreground">{step.description}</p>
+                  <h3 className="text-2xl font-bold font-playfair mb-4">{step.title}</h3>
+                  <p className="text-gray-300 leading-relaxed">{step.description}</p>
                 </div>
-                {index < processSteps.length - 1 && (
-                  <div className="hidden lg:block absolute top-10 left-[60%] w-full h-0.5 bg-gold/30" />
-                )}
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Featured Projects */}
+      {/* Featured Projects - Premium Gallery */}
       <section className="section-padding bg-background">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <p className="text-gold font-semibold mb-2">OUR PROJECTS</p>
-            <h2 className="text-4xl md:text-5xl font-bold font-playfair mb-4">Featured Projects</h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Explore our portfolio of stunning transformations
+          <div className="text-center mb-16">
+            <span className="text-gold font-bold text-sm tracking-wider uppercase">PORTFOLIO SHOWCASE</span>
+            <h2 className="text-5xl md:text-6xl font-bold font-playfair mt-4 mb-6">
+              Featured <span className="text-gradient">Projects</span>
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              Discover our award-winning transformations across luxury residences and commercial spaces
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {featuredProjects.map((project, index) => (
-              <div key={index} className="group relative overflow-hidden rounded-lg hover-lift">
-                <img 
-                  src={project.image} 
-                  alt={project.title}
-                  className="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex flex-col justify-end p-6">
-                  <p className="text-gold text-sm font-semibold mb-1">{project.category}</p>
-                  <h3 className="text-white text-xl font-bold font-playfair">{project.title}</h3>
+              <div key={index} className="group relative overflow-hidden rounded-2xl hover-lift shadow-xl">
+                <div className="aspect-[4/5] overflow-hidden">
+                  <img 
+                    src={project.image} 
+                    alt={project.title}
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  />
+                </div>
+                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="absolute bottom-0 left-0 right-0 p-8 transform translate-y-8 group-hover:translate-y-0 transition-transform duration-300">
+                  <span className="inline-block px-4 py-1 bg-gold text-charcoal text-xs font-bold rounded-full mb-3">
+                    {project.category}
+                  </span>
+                  <h3 className="text-white text-2xl font-bold font-playfair mb-2">{project.title}</h3>
+                  <div className="flex items-center space-x-4 text-sm text-white/80">
+                    <span>📍 {project.location}</span>
+                    <span>📐 {project.area}</span>
+                  </div>
                 </div>
               </div>
             ))}
           </div>
 
-          <div className="text-center mt-12">
+          <div className="text-center mt-16">
             <Link to="/projects">
-              <Button size="lg" className="bg-gold hover:bg-gold-dark text-charcoal font-semibold">
-                View All Projects <ArrowRight className="ml-2" size={18} />
+              <Button size="lg" variant="outline" className="border-2 border-gold text-gold hover:bg-gold hover:text-charcoal font-bold text-lg px-10 py-7 rounded-lg">
+                View Complete Portfolio
+                <ArrowRight className="ml-2" size={20} />
               </Button>
             </Link>
           </div>
         </div>
       </section>
 
-      {/* Testimonials */}
-      <section className="section-padding bg-charcoal text-white">
+      {/* Testimonials - Modern Cards */}
+      <section className="section-padding bg-cream">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <p className="text-gold font-semibold mb-2">CLIENT TESTIMONIALS</p>
-            <h2 className="text-4xl md:text-5xl font-bold font-playfair mb-4">
-              Trusted by thousands of <span className="text-gold">people & companies</span>
+          <div className="text-center mb-16">
+            <span className="text-gold font-bold text-sm tracking-wider uppercase">CLIENT SUCCESS STORIES</span>
+            <h2 className="text-5xl md:text-6xl font-bold font-playfair mt-4 mb-6">
+              What Our Clients <span className="text-gradient">Say</span>
             </h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              Real experiences from homeowners and businesses we've transformed
+            </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
-              <Card key={index} className="bg-white/5 border-white/10 hover-lift">
-                <CardContent className="p-8">
-                  <div className="flex mb-4">
+              <Card key={index} className="hover-lift border-0 shadow-2xl relative overflow-hidden">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-gold/5 rounded-full -mr-16 -mt-16" />
+                <CardContent className="p-8 relative">
+                  <div className="flex mb-6">
                     {[...Array(testimonial.rating)].map((_, i) => (
-                      <span key={i} className="text-gold">★</span>
+                      <span key={i} className="text-gold text-2xl">★</span>
                     ))}
                   </div>
-                  <p className="text-gray-300 mb-6 italic leading-relaxed">"{testimonial.text}"</p>
-                  <div className="flex items-center space-x-3">
-                    <div className="w-12 h-12 bg-gold rounded-full flex items-center justify-center">
-                      <span className="text-charcoal font-bold text-lg">
+                  <p className="text-muted-foreground mb-8 italic leading-relaxed text-lg">
+                    "{testimonial.text}"
+                  </p>
+                  <div className="flex items-center space-x-4">
+                    <div className="w-14 h-14 bg-gradient-gold rounded-full flex items-center justify-center shadow-lg">
+                      <span className="text-charcoal font-bold text-xl">
                         {testimonial.name.charAt(0)}
                       </span>
                     </div>
                     <div>
-                      <h4 className="font-semibold text-white">{testimonial.name}</h4>
-                      <p className="text-sm text-gray-400">{testimonial.location}</p>
+                      <h4 className="font-bold text-lg">{testimonial.name}</h4>
+                      <p className="text-sm text-gold font-semibold">{testimonial.project}</p>
+                      <p className="text-sm text-muted-foreground">{testimonial.location}</p>
                     </div>
                   </div>
                 </CardContent>
@@ -364,20 +478,50 @@ const Home = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="section-padding bg-gold">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl md:text-5xl font-bold font-playfair mb-6 text-charcoal">
-            Ready to Transform Your Space?
+      {/* CTA Section - Premium */}
+      <section className="section-padding gradient-dark text-white relative overflow-hidden">
+        <div className="absolute inset-0 pattern-dots opacity-10" />
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gold/5 rounded-full blur-3xl" />
+        
+        <div className="container mx-auto px-4 text-center relative z-10">
+          <span className="inline-block px-6 py-2 bg-gold/20 backdrop-blur-sm border border-gold/30 rounded-full text-gold font-semibold text-sm tracking-wider mb-8">
+            START YOUR TRANSFORMATION TODAY
+          </span>
+          <h2 className="text-5xl md:text-7xl font-bold font-playfair mb-8 leading-tight">
+            Ready to Create Your <br/><span className="text-gold">Dream Space?</span>
           </h2>
-          <p className="text-xl text-charcoal/80 mb-8 max-w-2xl mx-auto">
-            Let's bring your vision to life with our expert design team
+          <p className="text-2xl text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed">
+            Let's transform your vision into a stunning reality with our award-winning design expertise
           </p>
-          <Link to="/contact">
-            <Button size="lg" className="bg-charcoal hover:bg-charcoal/90 text-white font-semibold text-lg px-8 py-6">
-              Start Your Project Today <ArrowRight className="ml-2" size={20} />
-            </Button>
-          </Link>
+          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+            <Link to="/contact">
+              <Button size="lg" className="bg-gold hover:bg-gold-dark text-charcoal font-bold text-xl px-12 py-8 shine-effect rounded-lg shadow-2xl">
+                Get Free Consultation
+                <ArrowRight className="ml-3" size={24} />
+              </Button>
+            </Link>
+            <a href="tel:+1234567890">
+              <Button size="lg" variant="outline" className="glass-effect text-white border-2 border-white/30 hover:bg-white/10 font-bold text-xl px-12 py-8 rounded-lg backdrop-blur-md">
+                <Phone className="mr-3" size={24} /> Call Us Now
+              </Button>
+            </a>
+          </div>
+
+          {/* Trust Indicators */}
+          <div className="mt-16 grid grid-cols-3 gap-8 max-w-2xl mx-auto">
+            <div className="text-center">
+              <ShieldCheck className="text-gold mx-auto mb-2" size={32} />
+              <p className="text-sm text-gray-300">Licensed & Insured</p>
+            </div>
+            <div className="text-center">
+              <Award className="text-gold mx-auto mb-2" size={32} />
+              <p className="text-sm text-gray-300">Award-Winning</p>
+            </div>
+            <div className="text-center">
+              <Clock className="text-gold mx-auto mb-2" size={32} />
+              <p className="text-sm text-gray-300">24/7 Support</p>
+            </div>
+          </div>
         </div>
       </section>
     </div>
